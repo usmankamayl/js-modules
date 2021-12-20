@@ -9,7 +9,7 @@
 
  При выполнении задания необходимо учесть, что массив может содержать не только числа, но и, например, знаки, null и так далее.
  */
-
+//task 1
 
 let arr = ['apple', 'apple', 'apple'];
 console.log(arr.length);
@@ -22,7 +22,7 @@ for (let i = 0; i < arr.length; i++) {
         console.log(false);
     }
 }
-
+//task 2
 const a = 1;
 console.log(typeof a);
 const arr2 = [1, 5, 8,  0,  12, 15, 34, 87, 12, 234, 11, 0];
@@ -32,13 +32,13 @@ const nulls = [];
 for (let i = 0; i < arr2.length; i++) {
    if (arr2[i] === 0) {
        nulls.push(arr2[i]);
-   } else if (arr2[i] % 2 == 0) {
+   } else if (arr2[i] % 2 === 0) {
        evens.push(arr2[i]);
    } else {
        odds.push(arr2[i]);
    }
 }
 
-console.log(nulls);
-console.log(evens);
-console.log(odds);
+console.log('Количество нулей: ', nulls.length);
+console.log('Количество четных чисел: ', evens.length);
+console.log('Количество нечетных чисел: ', odds.length);
