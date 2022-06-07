@@ -94,7 +94,7 @@ function printNumbers(from, to) {
 
     let timerId = setInterval(function() {
         console.log((current));
-        if (current == to) {
+        if (current === to) {
             clearInterval(timerId);
         }
         current++;
