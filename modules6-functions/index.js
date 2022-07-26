@@ -1,3 +1,4 @@
+'use strict'
 /**
  Задание 1.
 
@@ -89,19 +90,19 @@ console.log(func(11)(4));
 Например, пользователь ввёл числа 5 и 15. Каждую секунду в консоль должно печататься число, начиная с 5 и заканчивая 15 (всего 11 чисел: 5 6 7 8 9 10 11 12 13 14 15).
 * */
 
-function printNumbers(from, to) {
-    let current = from;
-
-    let timerId = setInterval(function() {
-        console.log((current));
-        if (current === to) {
-            clearInterval(timerId);
-        }
-        current++;
-    }, 1000);
-}
-
-printNumbers(0, 10);
+// function printNumbers(from, to) {
+//     let current = from;
+//
+//     let timerId = setInterval(function() {
+//         console.log((current));
+//         if (current === to) {
+//             clearInterval(timerId);
+//         }
+//         current++;
+//     }, 1000);
+// }
+//
+// printNumbers(0, 10);
 
 /*
 * Задание 5.
@@ -115,7 +116,37 @@ printNumbers(0, 10);
 * */
 
 
-const toPower = (a, b) => a**b;
+// const toPower = (a, b) => a**b;
+//
+//
+// console.log(toPower(3, 3));
+{
+    const User = {
+
+        name: 'Vasya',
+
+        getName: () => this.name
+    }
+
+    console.log( typeof User.getName(), '1-call' );
+
+    console.log(window)
+}
 
 
-console.log(toPower(3, 3));
+
+{
+    const User = {
+
+        name: 'Vasya',
+
+        getName() {
+
+            return this.name;
+
+        }
+
+    }
+
+    console.log( User.getName(), '2-call' );
+}
